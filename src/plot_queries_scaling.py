@@ -4,7 +4,7 @@ import scienceplots
 
 plt.style.use('science')
 
-queries = ['query1', 'query2']
+queries = ['query1', 'query2', 'query3']
 
 for query in queries:
     df = pd.read_csv(f'data/{query}_subsamples.csv')
