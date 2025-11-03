@@ -7,7 +7,7 @@ plt.style.use('science')
 queries = ['query1', 'query2', 'query3', 'query4']
 
 for query in queries:
-    df = pd.read_csv(f'data/{query}_subsamples.csv')
+    df = pd.read_csv(f'data/queries/{query}_subsamples.csv')
 
     solutions = df['solution'].unique()
     sample_percentages = [1, 10, 50, 100]
@@ -28,7 +28,7 @@ for query in queries:
     ax1.grid(True, alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig(f'plots/{query}_scaling_cold.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'plots/queries/{query}_scaling_cold.png', dpi=300, bbox_inches='tight')
 
     # Warm cache plot
     fig2, ax2 = plt.subplots()
@@ -46,4 +46,4 @@ for query in queries:
     ax2.grid(True, alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig(f'plots/{query}_scaling_warm.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'plots/queries/{query}_scaling_warm.png', dpi=300, bbox_inches='tight')

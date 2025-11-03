@@ -8,7 +8,7 @@ plt.style.use('science')
 queries = ['query1', 'query2', 'query3', 'query4']
 
 for query in queries:
-    df = pd.read_csv(f'data/{query}.csv')
+    df = pd.read_csv(f'data/queries/{query}.csv')
 
     solutions = df['solution'].unique()
     cold_means = []
@@ -35,5 +35,5 @@ for query in queries:
 
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig(f'plots/{query}.png', dpi=300)
+    plt.savefig(f'plots/queries/{query}.png', dpi=300)
     plt.close()
