@@ -1,0 +1,6 @@
+solution,chrom,pos,id,ref,alt, qual,filter
+vcf2db,true,true,false,true,true,true,true
+cutevariant,true,true,true,true,true,true,true
+VCFdbR-table,true,true,false,true,true,true,true
+VCFdbR-file,true,true,false,true,true,true,true
+vcf-miner,true,true,true,true,true,true,true

@@ -1,0 +1,6 @@
+solution,gt,dp,ft,gl,gle,pl,gp,gq,hq,ps,pq,ec,mq
+vcf2db,true,true,false,false,false,true,false,true,false,false,false,false,false
+cutevariant,true,false,true,false,false,true,true,true,false,false,false,false,false
+VCFdbR-table,true,false,false,false,false,false,false,false,false,false,false,false,false
+VCFdbR-file,true,false,false,false,false,false,false,false,false,false,false,false,false
+vcf-miner,true,false,false,false,false,false,false,false,false,false,false,false,false
