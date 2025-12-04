@@ -1,10 +1,10 @@
 solution,cache,timing
-vcf2db,cold,3.755262657
-vcf2db,cold,4.003231377
-vcf2db,cold,3.862041720
-vcf2db,warm,2.959584627
-vcf2db,warm,2.887895721
-vcf2db,warm,2.879023500
+vcf2db,cold,0.122750288
+vcf2db,cold,0.118837876
+vcf2db,cold,0.107804941
+vcf2db,warm,0.051524569
+vcf2db,warm,0.050679066
+vcf2db,warm,0.046898951
 cutevariant,cold,0.013837132
 cutevariant,cold,0.011683782
 cutevariant,cold,0.013551880
