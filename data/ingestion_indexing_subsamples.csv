@@ -1,8 +1,8 @@
 solution,sample_percentage,ingestion,indexing
-vcf2db,100,194668.2,23057.1
-vcf2db,50,121801.5,11872.6
-vcf2db,10,10955.2,2414.7
-vcf2db,1,5397.5,373.5
+vcf2db,100,178404.9,28494.5
+vcf2db,50,145214.4,13602.5
+vcf2db,10,10093.6,2751.1
+vcf2db,1,3896.4,425.0
 cutevariant,100,221261.7,24629.4
 cutevariant,50,111065.5,12141.3
 cutevariant,10,23739.8,1973.2
