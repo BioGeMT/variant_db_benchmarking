@@ -14,7 +14,7 @@ WHERE CAST(NULLIF(SPLIT_PART(ann.af, '&', 1), '') AS FLOAT) < 0.01
 AND ann.impact = 'HIGH'
 AND v.chromosome IN ('1', '2', '3');
 ```
-## VCFdbR FileGT & VCFdbR TableGT
+## VCFdbR fileGT & VCFdbR tableGT
 ```sql
 SELECT vi.chr AS chromosome, vi.start AS position, vi.ref, vi.alt,
 vim.af, vim.consequence, vim.symbol

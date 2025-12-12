@@ -13,7 +13,7 @@ WHERE v.chromosome = '1'
 AND v.position BETWEEN 100000 AND 200000;
 ```
 
-## VCF2dbRfile
+## VCF2dbR fileGT
 ```sql
 SELECT chr AS chromosome, start AS position, ref, alt
 FROM variant_info
@@ -21,7 +21,7 @@ WHERE chr = '1'
 AND start BETWEEN 100000 AND 200000;
 ```
 
-## VCF2dbRtable
+## VCF2dbR tableGT
 ```sql
 SELECT chr AS chromosome, start AS position, ref, alt
 FROM variant_info
