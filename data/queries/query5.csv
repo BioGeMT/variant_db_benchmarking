@@ -23,9 +23,9 @@ VCFdbR-file,cold,28.480323852
 VCFdbR-file,warm,13.834989606
 VCFdbR-file,warm,13.942053661
 VCFdbR-file,warm,14.033783544
-vcf-miner,cold,
-vcf-miner,cold,
-vcf-miner,cold,
-vcf-miner,warm,
-vcf-miner,warm,
-vcf-miner,warm,
+vcf-miner,cold,713.654463843
+vcf-miner,cold,713.298798131
+vcf-miner,cold,725.369438940
+vcf-miner,warm,259.932132072
+vcf-miner,warm,122.741801797
+vcf-miner,warm,123.488326331
