@@ -20,20 +20,23 @@ for query in queries:
         cold_means.append(cold_data.mean())
         warm_means.append(warm_data.mean())
 
-    fig, ax = plt.subplots()
     x = np.arange(len(solutions))
     width = 0.25
 
-    ax.bar(x - width/2, cold_means, width, label='Cold')
-    ax.bar(x + width/2, warm_means, width, label='Warm')
+    for scale_type in ['log', 'linear']:
+        fig, ax = plt.subplots()
 
-    ax.set_ylabel('Time (s)')
-    ax.set_yscale('log')
-    ax.set_xticks(x)
-    ax.set_xticklabels(solutions)
-    ax.legend(loc='upper left', fontsize='small', handlelength=1, handletextpad=0.5)
+        ax.bar(x - width/2, cold_means, width, label='Cold')
+        ax.bar(x + width/2, warm_means, width, label='Warm')
 
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.savefig(f'plots/queries/{query}.png', dpi=300)
-    plt.close()
+        ax.set_ylabel('Time (s)')
+        if scale_type == 'log':
+            ax.set_yscale('log')
+        ax.set_xticks(x)
+        ax.set_xticklabels(solutions)
+        ax.legend(loc='upper left', fontsize='small', handlelength=1, handletextpad=0.5)
+
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.savefig(f'plots/queries/{query}_{scale_type}.png', dpi=300)
+        plt.close()
