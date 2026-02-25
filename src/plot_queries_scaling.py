@@ -3,6 +3,7 @@ import pandas as pd
 import scienceplots
 
 plt.style.use('science')
+plt.rcParams['axes.prop_cycle'] = plt.cycler(color=['#ffb000', '#fe6100', '#dc267f', '#785ef0', '#648fff'])
 
 queries = ['query1', 'query2', 'query3', 'query4', 'query5', 'query6', 'query7']
 
