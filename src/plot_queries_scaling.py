@@ -5,6 +5,8 @@ import scienceplots
 plt.style.use('science')
 plt.rcParams['axes.prop_cycle'] = plt.cycler(color=['#ffb000', '#fe6100', '#dc267f', '#785ef0', '#648fff'])
 
+markers = ['o', 's', '^', 'D', 'v', 'P', 'X']
+
 queries = ['query1', 'query2', 'query3', 'query4', 'query5', 'query6', 'query7']
 
 for query in queries:
@@ -17,10 +19,10 @@ for query in queries:
         # Cold cache plot
         fig1, ax1 = plt.subplots()
 
-        for solution in solutions:
+        for i, solution in enumerate(solutions):
             solution_data = df[(df['solution'] == solution) & (df['cache'] == 'cold')]
             cold_means = solution_data.groupby('sample_percentage')['timing'].mean()
-            ax1.plot(cold_means.index, cold_means.values, marker='o', markersize=4, label=solution)
+            ax1.plot(cold_means.index, cold_means.values, marker=markers[i % len(markers)], markersize=4, label=solution)
 
         ax1.set_xlabel('Sample Percentage (\%)')
         ax1.set_ylabel('Time (s)')
@@ -37,10 +39,10 @@ for query in queries:
         # Warm cache plot
         fig2, ax2 = plt.subplots()
 
-        for solution in solutions:
+        for i, solution in enumerate(solutions):
             solution_data = df[(df['solution'] == solution) & (df['cache'] == 'warm')]
             warm_means = solution_data.groupby('sample_percentage')['timing'].mean()
-            ax2.plot(warm_means.index, warm_means.values, marker='o', markersize=4, label=solution)
+            ax2.plot(warm_means.index, warm_means.values, marker=markers[i % len(markers)], markersize=4, label=solution)
 
         ax2.set_xlabel('Sample Percentage (\%)')
         ax2.set_ylabel('Time (s)')
