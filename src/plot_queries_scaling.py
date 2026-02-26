@@ -62,7 +62,7 @@ for query in queries:
 fig_leg, ax_leg = plt.subplots()
 for i, solution in enumerate(solutions):
     ax_leg.plot([], [], marker=markers[i % len(markers)], markersize=4, label=solution)
-legend = ax_leg.legend(ncol=len(solutions), loc='center', fontsize=7, frameon=True)
+legend = ax_leg.legend(ncol=1, loc='center', fontsize=7, frameon=True)
 ax_leg.set_axis_off()
 fig_leg.set_size_inches(legend.get_window_extent().width / fig_leg.dpi,
                         legend.get_window_extent().height / fig_leg.dpi)
