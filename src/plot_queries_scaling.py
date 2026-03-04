@@ -27,7 +27,8 @@ for query in queries:
         for i, solution in enumerate(solutions):
             solution_data = df[(df['solution'] == solution) & (df['cache'] == 'cold')]
             cold_means = solution_data.groupby('sample_percentage')['timing'].mean()
-            ax1.plot(cold_means.index, cold_means.values, marker=markers[i % len(markers)], linestyle=linestyles[i % len(linestyles)], markersize=4, label=solution)
+            lw, ms = (2, 6) if solution == 'vcf2db' else (1, 4)
+            ax1.plot(cold_means.index, cold_means.values, marker=markers[i % len(markers)], linestyle=linestyles[i % len(linestyles)], markersize=ms, linewidth=lw, label=solution)
 
         ax1.set_xlabel('Sample Percentage (\%)')
         ax1.set_ylabel('Time (s)')
@@ -46,7 +47,8 @@ for query in queries:
         for i, solution in enumerate(solutions):
             solution_data = df[(df['solution'] == solution) & (df['cache'] == 'warm')]
             warm_means = solution_data.groupby('sample_percentage')['timing'].mean()
-            ax2.plot(warm_means.index, warm_means.values, marker=markers[i % len(markers)], linestyle=linestyles[i % len(linestyles)], markersize=4, label=solution)
+            lw, ms = (2, 6) if solution == 'vcf2db' else (1, 4)
+            ax2.plot(warm_means.index, warm_means.values, marker=markers[i % len(markers)], linestyle=linestyles[i % len(linestyles)], markersize=ms, linewidth=lw, label=solution)
 
         ax2.set_xlabel('Sample Percentage (\%)')
         ax2.set_ylabel('Time (s)')
@@ -62,7 +64,8 @@ for query in queries:
 # Standalone legend
 fig_leg, ax_leg = plt.subplots()
 for i, solution in enumerate(solutions):
-    ax_leg.plot([], [], marker=markers[i % len(markers)], linestyle=linestyles[i % len(linestyles)], markersize=4, label=solution)
+    lw, ms = (2, 6) if solution == 'vcf2db' else (1, 4)
+    ax_leg.plot([], [], marker=markers[i % len(markers)], linestyle=linestyles[i % len(linestyles)], markersize=ms, linewidth=lw, label=solution)
 legend = ax_leg.legend(ncol=1, loc='center', fontsize=7, frameon=True)
 ax_leg.set_axis_off()
 fig_leg.set_size_inches(legend.get_window_extent().width / fig_leg.dpi,
