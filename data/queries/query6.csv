@@ -1,7 +1,7 @@
 solution,cache,timing
-vcf2db,cold,281.545403984
-vcf2db,cold,308.360869886
-vcf2db,cold,284.103637022
+vcf2db,cold,316.488391200
+vcf2db,cold,320.570123304
+vcf2db,cold,312.103637022
 vcf2db,warm,203.029728599
 vcf2db,warm,227.692839295
 vcf2db,warm,202.142071872
