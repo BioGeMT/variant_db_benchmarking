@@ -5,6 +5,7 @@ from matplotlib.ticker import LogFormatterSciNotation
 import scienceplots
 
 plt.style.use('science')
+plt.rcParams.update({"xtick.labelsize": 12, "ytick.labelsize": 12})
 
 # ----------------------------------------------------------------------
 # 1. Load scalability data
@@ -100,10 +101,10 @@ for i, q in enumerate(queries_fig3):
         ax_cold_lin.set_xticklabels(x_labels)
     else:
         ax_cold_lin.set_xticklabels([])
-    ax_cold_lin.set_ylabel(f"{q}\nTime (s)", fontsize=10, fontweight="bold")
+    ax_cold_lin.set_ylabel(f"{q}\nTime (s)", fontsize=13, fontweight="bold")
     ax_cold_lin.grid(True, axis="y", linestyle=":", alpha=0.4, linewidth=0.5)
     if i == 0:
-        ax_cold_lin.set_title("Cold Cache\n[Linear Scale]", fontsize=11, fontweight="bold")
+        ax_cold_lin.set_title("Cold Cache\n[Linear Scale]", fontsize=14, fontweight="bold")
     
     # Column 1: Cold cache - Log scale
     ax_cold_log = axes[i, 1]
@@ -128,11 +129,11 @@ for i, q in enumerate(queries_fig3):
         ax_cold_log.set_xticklabels(x_labels)
     else:
         ax_cold_log.set_xticklabels([])
-    ax_cold_log.set_ylabel(f"{q}\nTime (s)", fontsize=10, fontweight="bold")
+    ax_cold_log.set_ylabel(f"{q}\nTime (s)", fontsize=13, fontweight="bold")
     ax_cold_log.yaxis.set_major_formatter(LogFormatterSciNotation())
     ax_cold_log.grid(True, axis="y", linestyle=":", alpha=0.4, linewidth=0.5, which='both')
     if i == 0:
-        ax_cold_log.set_title("Cold Cache\n[Log Scale]", fontsize=11, fontweight="bold")
+        ax_cold_log.set_title("Cold Cache\n[Log Scale]", fontsize=14, fontweight="bold")
     
     # Column 2: Warm cache - Linear scale
     ax_warm_lin = axes[i, 2]
@@ -157,10 +158,10 @@ for i, q in enumerate(queries_fig3):
         ax_warm_lin.set_xticklabels(x_labels)
     else:
         ax_warm_lin.set_xticklabels([])
-    ax_warm_lin.set_ylabel(f"{q}\nTime (s)", fontsize=10, fontweight="bold")
+    ax_warm_lin.set_ylabel(f"{q}\nTime (s)", fontsize=13, fontweight="bold")
     ax_warm_lin.grid(True, axis="y", linestyle=":", alpha=0.4, linewidth=0.5)
     if i == 0:
-        ax_warm_lin.set_title("Warm Cache\n[Linear Scale]", fontsize=11, fontweight="bold")
+        ax_warm_lin.set_title("Warm Cache\n[Linear Scale]", fontsize=14, fontweight="bold")
     
     # Column 3: Warm cache - Log scale
     ax_warm_log = axes[i, 3]
@@ -185,16 +186,16 @@ for i, q in enumerate(queries_fig3):
         ax_warm_log.set_xticklabels(x_labels)
     else:
         ax_warm_log.set_xticklabels([])
-    ax_warm_log.set_ylabel(f"{q}\nTime (s)", fontsize=10, fontweight="bold")
+    ax_warm_log.set_ylabel(f"{q}\nTime (s)", fontsize=13, fontweight="bold")
     ax_warm_log.yaxis.set_major_formatter(LogFormatterSciNotation())
     ax_warm_log.grid(True, axis="y", linestyle=":", alpha=0.4, linewidth=0.5, which='both')
     if i == 0:
-        ax_warm_log.set_title("Warm Cache\n[Log Scale]", fontsize=11, fontweight="bold")
+        ax_warm_log.set_title("Warm Cache\n[Log Scale]", fontsize=14, fontweight="bold")
 
 # ----------------------------------------------------------------------
 # 4. Add shared x-axis label
 # ----------------------------------------------------------------------
-fig.supxlabel("Sample Percentage (\\%)", fontsize=12)
+fig.supxlabel("Sample Percentage (\\%)", fontsize=15)
 
 # ----------------------------------------------------------------------
 # 5. Add legend (from first row, first column)
@@ -205,9 +206,9 @@ fig.legend(by_label.values(), by_label.keys(),
            loc="lower center",
            bbox_to_anchor=(0.5, 1.0),
            ncol=len(by_label),
-           fontsize=10, 
+           fontsize=12,
            title="Database System",
-           title_fontsize=11,
+           title_fontsize=13,
            frameon=True,
            fancybox=True,
            shadow=True)
