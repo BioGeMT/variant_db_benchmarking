@@ -91,7 +91,7 @@ for label, start, end in groups:
     ax1.plot([arm_x, bracket_x, bracket_x, arm_x], [top, top, bottom, bottom],
              transform=trans, color="black", linewidth=1.0, clip_on=False)
     ax1.text(bracket_x - 0.02, (start + end) / 2, label, transform=trans,
-             ha="right", va="center", fontsize=9, style="italic")
+             ha="right", va="center", fontsize=12, style="italic")
 
 # ----------------------------------------------------------------------
 # 7. Axes labels and panel titles
@@ -121,6 +121,7 @@ cbar.set_label(r"$\log_{10}$(runtime in seconds)", fontsize=11)
 cbar.formatter = FuncFormatter(
     lambda v, _: rf"$10^{{{int(round(np.log10(v)))}}}$" if v < 1 else f"{v:g}")
 cbar.update_ticks()
+cbar.ax.tick_params(labelsize=12)
 
 # ----------------------------------------------------------------------
 # 9. Export
