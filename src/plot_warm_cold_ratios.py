@@ -102,7 +102,7 @@ for pos, label in zip(group_positions, group_labels):
 # ----------------------------------------------------------------------
 # 7. Legend, title, grid, layout
 # ----------------------------------------------------------------------
-ax.legend(title="System", bbox_to_anchor=(1.05, 1), loc='upper left')
+ax.legend(title="Database System", bbox_to_anchor=(1.05, 1), loc='upper left')
 ax.set_ylim(0.01, 2)
 ax.grid(axis="y", linestyle=":", alpha=0.4)
 
