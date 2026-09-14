@@ -216,8 +216,8 @@ fig.legend(by_label.values(), by_label.keys(),
 # 6. Main title and save
 # ----------------------------------------------------------------------
 plt.tight_layout()
-plt.savefig("Figure3_Lightweight_DualScale.png", dpi=300, bbox_inches="tight")
-plt.savefig("Figure3_Lightweight_DualScale.pdf", bbox_inches="tight")
+plt.savefig("plots/paper_figures/Figure3_Lightweight_DualScale.png", dpi=300, bbox_inches="tight")
+plt.savefig("plots/paper_figures/Figure3_Lightweight_DualScale.pdf", bbox_inches="tight")
 plt.show()
 
 print("Figure 3 generated successfully!")
